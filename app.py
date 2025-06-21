@@ -112,8 +112,8 @@ def inversion_mutation(chromosome, elite_index):
 
 if uploaded_distance and uploaded_demand:
     try:
-        distance_df = pd.read_excel(uploaded_distance)
-        demand_df = pd.read_excel(uploaded_demand)
+        distance_df = pd.read_excel(uploaded_distance, engine="openpyxl")
+        demand_df = pd.read_excel(uploaded_demand, engine="openpyxl")
 
         distance_matrix = distance_df.iloc[:, 1:].to_numpy()
         demands = demand_df['demand'].to_numpy()
