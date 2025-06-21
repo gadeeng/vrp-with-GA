@@ -29,11 +29,11 @@ with st.expander("📄 Lihat Contoh Format File yang Diupload"):
 
     col1, col2 = st.columns(2)
     with col1:
-        with open(r"data\distance_indomaret.xlsx", "rb") as f:
+        with open("data/distance_indomaret.xlsx", "rb") as f:
             st.download_button("⬇️ Download Contoh distance_indomaret.xlsx", f, "distance_indomaret.xlsx")
 
     with col2:
-        with open(r"data\indomaret_demand.xlsx", "rb") as f:
+        with open("data/indomaret_demand.xlsx", "rb") as f:
             st.download_button("⬇️ Download Contoh indomaret_demand.xlsx", f, "indomaret_demand.xlsx")
 
 def create_initial_population(num_locations, population_size):
